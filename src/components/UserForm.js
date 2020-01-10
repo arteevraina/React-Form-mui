@@ -1,4 +1,5 @@
 import React from "react"
+import FormUserDetails from "./FormUserDetails"
 
 class UserForm extends React.Component {
     constructor(props) {
@@ -18,30 +19,32 @@ class UserForm extends React.Component {
     }
 
     nextStep = () => {
-        this.state.setState({
+        const {step} = this.state
+        this.setState({
             step: step + 1
         })
     }
 
     prevState = () => {
-        this.state.setState({
+        const {step} = this.state
+        this.setState({
             step: step - 1
         })
     }
 
     handleChange = (event) => {
         this.state.setState({
-            firstName: event.target.value
-            lastName: event.target.value
-            email: event.target.value
-            occupation: event.target.value
-            city: event.target.value
+            firstName: event.target.value,
+            lastName: event.target.value,
+            email: event.target.value,
+            occupation: event.target.value,
+            city: event.target.value,
             bio: event.target.value
         })
     }
     render() {
-        const [step] = this.state
-        const [firstName, lastName, email, occupation, city, bio] = this.state
+        const {step} = this.state
+        const {firstName, lastName, email, occupation, city, bio} = this.state
         const values = {firstName, lastName, email, occupation, city, bio}
         switch(step) {
             case 1:

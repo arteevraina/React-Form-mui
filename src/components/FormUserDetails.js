@@ -23,7 +23,6 @@ class FormUserDetails extends React.Component {
                                 floatingLabelText="First Name"
                                 onChange={this.props.handleChange}
                                 />
-                        <Text
                     </React.Fragment>
                 </MuiThemeProvider>
         )

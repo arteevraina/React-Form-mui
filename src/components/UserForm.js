@@ -33,7 +33,7 @@ class UserForm extends React.Component {
     }
 
     handleChange = (event) => {
-        this.state.setState({
+        this.setState({
             firstName: event.target.value,
             lastName: event.target.value,
             email: event.target.value,

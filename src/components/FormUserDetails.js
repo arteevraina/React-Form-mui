@@ -22,6 +22,19 @@ class FormUserDetails extends React.Component {
                         <TextField hintText="Enter your First Name"
                                 floatingLabelText="First Name"
                                 onChange={handleChange('firstName')}
+                                defaultValue={values.firstName }
+                                />
+                        <br/>
+                        <TextField hintText="Enter your Last Name"
+                                floatingLabelText="Last Name"
+                                onChange={handleChange('lastName')}
+                                defaultValue={values.lastName }
+                                />
+                        <br/>
+                        <TextField hintText="Enter your Email"
+                                floatingLabelText="Email"
+                                onChange={handleChange('email')}
+                                defaultValue={values.email }
                                 />
                     </React.Fragment>
                 </MuiThemeProvider>

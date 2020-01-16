@@ -1,5 +1,6 @@
 import React from "react"
 import FormUserDetails from "./FormUserDetails"
+import FormPersonalDetails from "./FormPersonalDetails"
 
 class UserForm extends React.Component {
     constructor(props) {
@@ -34,7 +35,7 @@ class UserForm extends React.Component {
 
     handleChange = input => (event) => {   // passing input as parameter
         this.setState({
-            input: event.target.value
+            [input]: event.target.value
         })
     }
     render() {
@@ -50,7 +51,10 @@ class UserForm extends React.Component {
                 )
             case 2:
                 return(
-                    <h1>Personal Details</h1>
+                    <FormPersonalDetails
+                        nextStep = {this.nextStep} handleChange={this.handleChange} values={values}
+                        prevState={this.prevState}
+                    />
                 )
             case 3:
                 return(

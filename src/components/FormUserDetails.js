@@ -13,7 +13,7 @@ class FormUserDetails extends React.Component {
 
     render() {
 
-        const {values} = this.props
+        const {values, handleChange} = this.props
 
         return(
                 <MuiThemeProvider>
@@ -21,7 +21,7 @@ class FormUserDetails extends React.Component {
                         <AppBar title = "Enter User Details" />
                         <TextField hintText="Enter your First Name"
                                 floatingLabelText="First Name"
-                                onChange={this.props.handleChange}
+                                onChange={handleChange('firstName')}
                                 />
                     </React.Fragment>
                 </MuiThemeProvider>

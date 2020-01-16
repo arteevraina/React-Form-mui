@@ -32,7 +32,7 @@ class UserForm extends React.Component {
         })
     }
 
-    handleChange = (event) => {
+    handleChange = input => (event) => {   // passing input as parameter
         this.setState({
             firstName: event.target.value,
             lastName: event.target.value,
